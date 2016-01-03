@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>CloudBrain - Кабинет</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <style>
+        body {
+            width: 100%;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        #menu {
+            z-index: 2;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 71px;
+            background-color: rgba(198, 188, 188, 0.32);
+            height: 100%;
+            left: 0;
+        }
+
+        #logo img {
+            width: 51px;
+            padding-left: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            fill: black;
+        }
+
+        #logo {
+            background-color: #bfc6c5;
+        }
+
+        .icons {
+            padding-top: 15px;
+            padding-left: 15px;
+            padding-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .icons:hover {
+            background-color: #8e8e8e;
+        }
+
+        .editor {
+            background: #FFF none repeat scroll 0 0;
+            min-height: 100%;
+            box-sizing: border-box;
+            padding-top: 0px;
+            padding-left: 69px;
+            padding-right: 0px;
+        }
+
+        .editor iframe {
+            border: 0;
+            width: 99%;
+            position: absolute;
+            height: 100%;
+            border: none
+        }
+    </style>
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+        function send_data() {
+            var frame = $('iframe').contents();
+            var frame1 = frame.find('iframe').contents();
+            $.post("new_note", {text: frame1.find('body').html(), theme: frame.find('#theme').val()});
+            location.reload();
+        }
+        $(document).ready(function () {
+            var frame = $('iframe').contents();
+            frame.find('#theme').focus();
+        });
+    </script>
+</head>
+<body>
+<div id="menu">
+    <div id="logo">
+        <img src="/cloud/img/head.png">
+    </div>
+
+    <div class="icons">
+        <i class="fa fa-sticky-note-o fa-3x"></i>
+    </div>
+
+    <div class="icons" onclick="send_data()">
+        <i class="fa fa-plus fa-3x"></i>
+    </div>
+
+    <div class="icons">
+        <i class="fa fa-search fa-3x"></i>
+    </div>
+
+</div>
+
+<div class="editor">
+    <iframe src="/cloud/note_editor.html"></iframe>
+</div>
+</body>
+</html>

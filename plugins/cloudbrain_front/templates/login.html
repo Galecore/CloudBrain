@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/login.css">
+    <meta charset="UTF-8">
+    <title>Cloud Brain - Вход</title>
+</head>
+
+<body>
+
+<div id="header">
+
+    <img id='logo' src="img/logo.png" width="319" height="122"/>
+
+</div>
+
+<h1>Вход</h1>
+
+<div id="form">
+
+    {% block content %}
+
+        <div id="form_main">
+
+            <form method="post" action="/cloud/login">
+
+                {{ form.csrf_token }}
+
+                {{ form.email(id='email', placeholder="E-mail") }}
+
+                <br><br>
+
+                {{ form.password(id='password', placeholder="Пароль") }}
+
+                <br><br>
+
+                <div id="checkboxes">
+
+                    <input type="checkbox">Оставаться в системе.
+
+                    <a id="link">
+                        Я забыл пароль.
+                    </a>
+
+                </div>
+
+                <br><br>
+
+                {{ form.submit(id='reg', value='Войти') }}
+
+            </form>
+
+        </div>
+
+    {% endblock %}
+
+</div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#logo {
+    padding-left: 10%;
+    padding-top: 50px;
+}
+
+#menu {
+    text-align: right;
+    margin-right: 6.8%;
+    font-size: 23px;
+    padding-top: 15px;
+    color: grey;
+}
+
+#main_thing {
+    padding-top: 200px;
+    color: #3F4C56;
+    text-align: center;
+    font-stretch: ultra-condensed;
+    height: 320px;
+    line-height: 1.75rem;
+    font-weight: 300;
+}
+
+.menu_item:hover {
+    color: black;
+    cursor: pointer;
+}
+
+#search {
+    width: 100%;
+    height: 2000px;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    display: none;
+}
+
+#search_box {
+    width: 722px;
+    height: 658px;
+    border-radius: 10px;
+    border: 2px solid #cfcfcf;
+    background-color: rgb(0, 0, 0);
+    margin: 50px auto;
+}
+
+#button_search {
+    text-align: right;
+    color: #cfcfcf;
+    padding: 10px 10px;
+}
+
+#search_line_in {
+    width: 80%;
+    height: 55px;
+    margin: 0 72px;
+    border: 2px solid #cfcfcf;
+    background-color: black;
+    font-family: sans-serif;
+    color: #cfcfcf;
+    font-size: 24px;
+    appearance: none;
+    box-shadow: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+#features {
+    line-height: 1.75rem;
+    font-weight: 300;
+    height: 700px;
+    background-color: rgb(247, 248, 250);
+    color: rgb(63, 76, 86);
+}
+
+#table_features {
+    height: 80%;
+    margin: 0 auto;
+    border-spacing: 0;
+}
+
+#lets_start {
+    padding-top: 2ex;
+    padding-bottom: 2ex;
+    letter-spacing: 0.033ex;
+    font-size: 1.05em;
+    font-weight: 400;
+    text-align: center;
+    background-color: #2B9AF3;
+    color: #FFF;
+}
+
+#button_togo {
+    border: 1px solid white;
+    border-radius: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0.5ex 0.75rem;
+    margin: 0 0.35rem;
+    letter-spacing: 0.067ex;
+}
+
+#button_togo:hover {
+    border: 1px;
+    background-color: white;
+    color: #2B9AF3;
+    cursor: pointer;
+}
+
+#nojs {
+    width: 100%;
+    height: 2000px;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    color: red;
+    font-size: 50px;
+}

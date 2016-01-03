@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <title>Cloud Brain</title>
+    <link rel="stylesheet" href="css/front.css">
+
+</head>
+<body>
+<div id="menu">
+    <a class="menu_item"><i class="fa fa-home"></i>Меню</a>&nbsp;&nbsp;
+    <a class="menu_item" onclick="$('#search').slideToggle(1400);"><i class="fa fa-search"></i>Поиск</a>&nbsp;&nbsp;
+    <a class="menu_item" onclick="window.location='register'"><i class="fa fa-sign-in"></i>Регистрация</a>&nbsp;&nbsp;
+    <a class="menu_item" onclick="window.location='login'"><img width="17" height="17" src="img/head.png">Войти</a>
+</div>
+
+<img id='logo' src="img/logo.png" width="319" height="122"/>
+
+<div id="main_thing">
+    <h1>Начни погружать свой мозг в облако.</h1>
+    <h4>С нашей помощью вы можете хранить даже самые мимолётные ощущения на много лет.</h4>
+    <img src="img/google.png">
+    <img style="padding-left: 100px; padding-top: 50px" src="img/apple.png">
+</div>
+
+<div id="features">
+    <table id="table_features" width="90%">
+        <tbody>
+        <tr>
+            <td style="text-align: center;"><i class="fa fa-sticky-note-o fa-5x"></i>
+
+                <h3>Возможность записывать все свои мысли.</h3></td>
+            <td style="text-align: center;"><i class="fa fa-simplybuilt fa-5x"></i>
+
+                <h3>Очень прост в использовании.</h3></td>
+        </tr>
+        <tr>
+            <td style="text-align: center;"><i class="fa fa-file-archive-o fa-5x"></i><br>
+
+                <h3>Возможноть прикрепить файл любого типа.</h3></td>
+            <br/><br/>
+            <td style="text-align: center;"><i class="fa fa-cloud-upload fa-5x"></i><br>
+
+                <h3>Хранение файлов до 10gb.</h3></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div id="lets_start">
+    <i class="fa fa-play fa-1x"></i>
+    Начни использовать ресурс сейчас.
+    <a id="button_togo" onclick="window.location='register.html'">Регистрация</a>
+</div>
+<div id="search">
+    <div id="search_box">
+        <div id="button_search">
+            <button style="background: black; border: 0;cursor: pointer;" onclick="$('#search').slideToggle(1400);">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 32 32">
+                    <style>* {
+                        fill: #999999
+                    }
+
+                    [fill="none"],
+                    [fill="none"] * {
+                        fill: none !important;
+                    }
+
+                    [stroke] {
+                        stroke: #999999 !important;
+                    }
+
+                    :hover {
+                        fill: white;
+                    }
+                    </style>
+                    <path d="M31.158 32.118c-.246 0-.492-.093-.678-.282L.163 1.52c-.375-.375-.375-.983 0-1.358s.983-.375 1.358 0l30.317 30.316c.375.375.375.983 0 1.358-.187.188-.433.282-.678.282zM.842 32.118c-.246 0-.492-.093-.678-.282-.375-.375-.375-.983 0-1.358L30.48.162c.375-.375.983-.375 1.358 0s.375.983 0 1.358L1.52 31.836c-.186.188-.432.282-.677.282z"
+                          fill="#fff"/>
+                </svg>
+            </button>
+        </div>
+        <div id="search_line">
+            <input id="search_line_in" placeholder="Поиск" type="text">
+        </div>
+    </div>
+</div>
+<noscript>
+    <div id="nojs"><a style="padding: 0 auto;">Включите, пожалуйста, javascript.</a></div>
+</noscript>
+</body>
+</html>
